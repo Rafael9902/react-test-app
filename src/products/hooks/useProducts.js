@@ -7,13 +7,15 @@ export const useProducts = (endpoint, id = 0) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const products$ = getProducts(endpoint, id).subscribe({
-      next: (res) => setProducts(res),
-      error: (err) => console.error(err),
-      complete: setIsLoading(false),
-    });
-
-    return () => products$.unsubscribe();
+    getProducts(endpoint, id)
+      .then((res) => res.json())
+      .then((products) => {
+        setProducts(products);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }, [endpoint, id]);
 
   return {
