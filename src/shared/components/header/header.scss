@@ -1,0 +1,21 @@
+@use '../../../sass/utilitites/mixins';
+@use '../../../sass/utilitites/variables';
+
+.header {
+    @include mixins.flexbox(row, space-around, center, 0);
+    margin-bottom: 10rem;
+
+    &__list {
+        @include mixins.flexbox(row, center, center, 2rem);
+
+        &-item {
+            &--link {
+                color: variables.$white;
+            }
+        }
+    }
+
+    &__title {
+        color: variables.$white;
+    }
+}

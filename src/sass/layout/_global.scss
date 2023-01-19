@@ -1,0 +1,27 @@
+@use '../utilitites/variables';
+
+:root {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: 0;
+    outline: none;
+}

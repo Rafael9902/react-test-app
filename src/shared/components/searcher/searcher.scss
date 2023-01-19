@@ -1,0 +1,18 @@
+@use '../../../sass/utilitites/mixins';
+
+.search {
+    position: relative;
+
+    .material-symbols-outlined {
+        left: .2rem;
+        position: absolute;
+        top: .2rem;
+    }
+
+    &__input-text {
+        border-radius: 2.5rem;
+        font-weight: 600;
+        height: 2.5rem;
+        padding-left: 3rem;
+    }
+}

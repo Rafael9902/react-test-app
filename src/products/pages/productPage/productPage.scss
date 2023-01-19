@@ -1,0 +1,23 @@
+@use "../../../sass/utilitites/mixins";
+@use "../../../sass/utilitites/variables";
+
+.product {
+    &-container {
+        @include mixins.flexbox(row, center, center, 0);
+    }
+
+    &-details {
+        color: variables.$white;
+        position: absolute;
+        text-align: left;
+        width: 20%;
+
+        li {
+            margin-bottom: 2rem;
+        }
+
+        &__span {
+            color: variables.$light-green;
+        }
+    }
+}

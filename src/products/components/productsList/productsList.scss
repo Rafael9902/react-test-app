@@ -1,0 +1,7 @@
+@use '../../../sass/utilitites/mixins';
+
+$template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+
+.products-list {
+    @include mixins.grid($template-columns, 0, 14rem)
+}
